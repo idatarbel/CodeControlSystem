@@ -1,0 +1,11 @@
+{
+  "name": "codecontrolsystem",
+  "version": "3.0.0",
+  "description": "AI-powered code review & maintenance tool — exception handling, naming conventions, security audits, dead code removal, and intelligent commenting",
+  "bin": {
+    "code-control": "index.js"
+  },
+  "keywords": ["code", "review", "comments", "security", "documentation", "ai", "cli"],
+  "author": "Dan Spiegel",
+  "license": "MIT"
+}
