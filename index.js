@@ -516,6 +516,16 @@ async function main() {
   console.log(`\n=== Complete ===`);
   if (reporter) {
     console.log(`Findings written to: code_review/${reporter.filename}`);
+
+    // Open report in Notepad++
+    const { exec } = require("child_process");
+    const reportPath = reporter.filePath;
+    exec(`start "" "notepad++" "${reportPath}"`, (err) => {
+      if (err) {
+        // Fall back to default editor if Notepad++ not found
+        exec(`start "" "${reportPath}"`);
+      }
+    });
   }
 }
 
